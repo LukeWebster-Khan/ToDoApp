@@ -30,7 +30,7 @@ const addNewListTime = (task: Task )=>{
 const item = document.createElement('li');
 const label = document.createElement('label');
 const checkbox = document.createElement('input');
-checkbox.addEventListener("change", ()=>{
+addEventListener("change", ()=>{
     task.completed = checkbox.checked;
     saveTasks()
    
