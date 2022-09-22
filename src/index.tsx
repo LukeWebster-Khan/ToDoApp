@@ -1,4 +1,8 @@
 import {v4 as uuidV4} from 'uuid';
+import React from "react";
+import ReactDOM from "react-dom";
+import "../src/styles/styles.css";
+
 
 type Task = {
     id: string,
@@ -53,3 +57,9 @@ const loadTasks = () => {
 }
 const tasks: Task[] =  loadTasks()
 tasks.forEach(addNewListTime)
+
+const app = ()  => {
+    const element = document.createElement('div');
+    element.innerHTML = "Hello World";
+    return element;
+}
