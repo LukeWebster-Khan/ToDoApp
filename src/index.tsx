@@ -34,6 +34,11 @@ const addNewListTime = (task: Task )=>{
 const item = document.createElement('li');
 const label = document.createElement('label');
 const checkbox = document.createElement('input');
+
+const deleteButton = document.createElement('button');
+deleteButton.innerText = "Delete";
+deleteButton.classList.add('delete');
+
 addEventListener("change", ()=>{
     task.completed = checkbox.checked;
     saveTasks()
@@ -44,6 +49,7 @@ checkbox.checked = task.completed;
 label.append(checkbox, task.title);
 item.append(label);
 list?.append(item)
+item?.appendChild(deleteButton)
 }
 
 const saveTasks = () => {
