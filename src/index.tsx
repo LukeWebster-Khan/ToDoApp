@@ -39,6 +39,19 @@ const deleteButton = document.createElement('button');
 deleteButton.innerText = "Delete";
 deleteButton.classList.add('delete');
 
+deleteButton.addEventListener('click', (e) => {
+    const target = e.target as HTMLButtonElement;
+    const parent = target.parentElement as HTMLLIElement;
+    const id = parent.dataset
+    parent.remove()
+    localStorage.removeItem(task.id)
+    console.log(
+        'delete button clicked', id
+    )
+    // parent.remove();
+    // tasks = tasks.filter((t) => t.id !== task.id);
+    // saveTasks();
+})
 addEventListener("change", ()=>{
     task.completed = checkbox.checked;
     saveTasks()
