@@ -48,9 +48,6 @@ deleteButton.addEventListener('click', (e) => {
     console.log(
         'delete button clicked', id
     )
-    // parent.remove();
-    // tasks = tasks.filter((t) => t.id !== task.id);
-    // saveTasks();
 })
 addEventListener("change", ()=>{
     task.completed = checkbox.checked;
